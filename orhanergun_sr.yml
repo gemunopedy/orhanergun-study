@@ -1,0 +1,140 @@
+name: orhanergun_sr
+
+mgmt:
+  network: fixedips_6
+  ipv4-subnet: 172.30.6.0/24
+  ipv6-subnet: 2001:172:30:6::/80
+
+topology:
+  nodes:
+    xrv1:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.201
+      mgmt-ipv6: 2001:172:30:6::201
+      #startup-config: srv6-usid_config/xr01.cfg
+
+    xrv2:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.202
+      mgmt-ipv6: 2001:172:30:6::202
+      #startup-config: srv6-usid_config/xr02.cfg
+
+    xrv3:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.203
+      mgmt-ipv6: 2001:172:30:6::203
+      #startup-config: srv6-usid_config/xr03.cfg
+
+    xrv4:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.204
+      mgmt-ipv6: 2001:172:30:6::204
+      #startup-config: srv6-usid_config/xr04.cfg
+
+    xrv5:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.205
+      mgmt-ipv6: 2001:172:30:6::205
+      #startup-config: srv6-usid_config/xr05.cfg
+
+    xrv6:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.206
+      mgmt-ipv6: 2001:172:30:6::206
+      #startup-config: srv6-usid_config/xr05.cfg
+
+    xrv7:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.207
+      mgmt-ipv6: 2001:172:30:6::207
+      #startup-config: srv6-usid_config/xr05.cfg
+
+    xrv8:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.208
+      mgmt-ipv6: 2001:172:30:6::208
+      #startup-config: srv6-usid_config/xr05.cfg
+
+    xrv9:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.209
+      mgmt-ipv6: 2001:172:30:6::209
+      #startup-config: srv6-usid_config/xr05.cfg
+
+    xrv10:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.210
+      mgmt-ipv6: 2001:172:30:6::210
+      #startup-config: srv6-usid_config/xr05.cfg
+
+    xrv11:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.211
+      mgmt-ipv6: 2001:172:30:6::211
+      #startup-config: srv6-usid_config/xr05.cfg
+
+    xrv12:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.212
+      mgmt-ipv6: 2001:172:30:6::212
+      #startup-config: srv6-usid_config/xr05.cfg
+
+    xrv13:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.213
+      mgmt-ipv6: 2001:172:30:6::213
+      #startup-config: srv6-usid_config/xr05.cfg
+
+    xrv14:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.214
+      mgmt-ipv6: 2001:172:30:6::214
+      #startup-config: srv6-usid_config/xr05.cfg
+
+    xrv15:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:7.9.2
+      mgmt-ipv4: 172.30.6.215
+      mgmt-ipv6: 2001:172:30:6::215
+      #startup-config: srv6-usid_config/xr05.cfg
+     
+  links:
+    - endpoints: ["xrv1:Gi0-0-0-0", "xrv8:Gi0-0-0-0"]
+    - endpoints: ["xrv1:Gi0-0-0-1", "xrv9:Gi0-0-0-0"]
+    - endpoints: ["xrv1:Gi0-0-0-2", "xrv10:Gi0-0-0-0"]
+    - endpoints: ["xrv1:Gi0-0-0-3", "xrv11:Gi0-0-0-0"]
+    - endpoints: ["xrv1:Gi0-0-0-4", "xrv2:Gi0-0-0-4"]
+    - endpoints: ["xrv1:Gi0-0-0-5", "xrv5:Gi0-0-0-5"]
+    - endpoints: ["xrv1:Gi0-0-0-6", "xrv6:Gi0-0-0-6"]
+
+    - endpoints: ["xrv2:Gi0-0-0-0", "xrv5:Gi0-0-0-0"]
+   
+    - endpoints: ["xrv3:Gi0-0-0-0", "xrv6:Gi0-0-0-0"]
+    - endpoints: ["xrv3:Gi0-0-0-6", "xrv4:Gi0-0-0-6"]
+
+    - endpoints: ["xrv4:Gi0-0-0-0", "xrv12:Gi0-0-0-0"]
+    - endpoints: ["xrv4:Gi0-0-0-1", "xrv13:Gi0-0-0-0"]
+    - endpoints: ["xrv4:Gi0-0-0-2", "xrv14:Gi0-0-0-0"]
+    - endpoints: ["xrv4:Gi0-0-0-3", "xrv15:Gi0-0-0-0"]
+    - endpoints: ["xrv4:Gi0-0-0-4", "xrv5:Gi0-0-0-4"]
+    - endpoints: ["xrv4:Gi0-0-0-5", "xrv6:Gi0-0-0-5"]
+   
+    - endpoints: ["xrv5:Gi0-0-0-1", "xrv7:Gi0-0-0-1"]
+    - endpoints: ["xrv5:Gi0-0-0-7", "xrv6:Gi0-0-0-7"]
+    - endpoints: ["xrv5:Gi0-0-0-8", "xrv6:Gi0-0-0-8"]
+
+    - endpoints: ["xrv6:Gi0-0-0-2", "xrv7:Gi0-0-0-2"]
