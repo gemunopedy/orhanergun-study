@@ -1,116 +1,116 @@
 name: orhanergun_sr
 
 mgmt:
-  network: fixedips_6
-  ipv4-subnet: 172.30.6.0/24
-  ipv6-subnet: 2001:172:30:6::/80
+  network: fixedips
+  ipv4-subnet: 172.30.5.0/24
+  ipv6-subnet: 2001:172:30:5::/80
 
 topology:
   nodes:
     xrv1:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.201
-      mgmt-ipv6: 2001:172:30:6::201
-      #startup-config: srv6-usid_config/xr01.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.201
+      mgmt-ipv6: 2001:172:30:5::201
+      startup-config: orhanergun_sr_config/xrv1.cfg
 
     xrv2:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.202
-      mgmt-ipv6: 2001:172:30:6::202
-      #startup-config: srv6-usid_config/xr02.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.202
+      mgmt-ipv6: 2001:172:30:5::202
+      startup-config: orhanergun_sr_config/xrv2.cfg 
 
     xrv3:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.203
-      mgmt-ipv6: 2001:172:30:6::203
-      #startup-config: srv6-usid_config/xr03.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.203
+      mgmt-ipv6: 2001:172:30:5::203
+      startup-config: orhanergun_sr_config/xrv3.cfg
 
     xrv4:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.204
-      mgmt-ipv6: 2001:172:30:6::204
-      #startup-config: srv6-usid_config/xr04.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.204
+      mgmt-ipv6: 2001:172:30:5::204
+      startup-config: orhanergun_sr_config/xrv4.cfg
 
     xrv5:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.205
-      mgmt-ipv6: 2001:172:30:6::205
-      #startup-config: srv6-usid_config/xr05.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.205
+      mgmt-ipv6: 2001:172:30:5::205
+      startup-config: orhanergun_sr_config/xrv5.cfg
 
     xrv6:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.206
-      mgmt-ipv6: 2001:172:30:6::206
-      #startup-config: srv6-usid_config/xr05.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.206
+      mgmt-ipv6: 2001:172:30:5::206
+      startup-config: orhanergun_sr_config/xrv6.cfg
 
     xrv7:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.207
-      mgmt-ipv6: 2001:172:30:6::207
-      #startup-config: srv6-usid_config/xr05.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.207
+      mgmt-ipv6: 2001:172:30:5::207
+      startup-config: orhanergun_sr_config/xrv7.cfg
 
     xrv8:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.208
-      mgmt-ipv6: 2001:172:30:6::208
-      #startup-config: srv6-usid_config/xr05.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.208
+      mgmt-ipv6: 2001:172:30:5::208
+      startup-config: orhanergun_sr_config/xrv8.cfg
 
     xrv9:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.209
-      mgmt-ipv6: 2001:172:30:6::209
-      #startup-config: srv6-usid_config/xr05.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.209
+      mgmt-ipv6: 2001:172:30:5::209
+      startup-config: orhanergun_sr_config/xrv9.cfg
 
     xrv10:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.210
-      mgmt-ipv6: 2001:172:30:6::210
-      #startup-config: srv6-usid_config/xr05.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.210
+      mgmt-ipv6: 2001:172:30:5::210
+      startup-config: orhanergun_sr_config/xrv10.cfg
 
     xrv11:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.211
-      mgmt-ipv6: 2001:172:30:6::211
-      #startup-config: srv6-usid_config/xr05.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.211
+      mgmt-ipv6: 2001:172:30:5::211
+      startup-config: orhanergun_sr_config/xrv11.cfg
 
     xrv12:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.212
-      mgmt-ipv6: 2001:172:30:6::212
-      #startup-config: srv6-usid_config/xr05.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.212
+      mgmt-ipv6: 2001:172:30:5::212
+      startup-config: orhanergun_sr_config/xrv12.cfg
 
     xrv13:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.213
-      mgmt-ipv6: 2001:172:30:6::213
-      #startup-config: srv6-usid_config/xr05.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.213
+      mgmt-ipv6: 2001:172:30:5::213
+      startup-config: orhanergun_sr_config/xrv13.cfg
 
     xrv14:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.214
-      mgmt-ipv6: 2001:172:30:6::214
-      #startup-config: srv6-usid_config/xr05.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.214
+      mgmt-ipv6: 2001:172:30:5::214
+      startup-config: orhanergun_sr_config/xrv14.cfg
 
     xrv15:
       kind: cisco_xrd
-      image: ios-xr/xrd-control-plane:7.9.2
-      mgmt-ipv4: 172.30.6.215
-      mgmt-ipv6: 2001:172:30:6::215
-      #startup-config: srv6-usid_config/xr05.cfg
+      image: ios-xr/xrd-control-plane:7.10.2
+      mgmt-ipv4: 172.30.5.215
+      mgmt-ipv6: 2001:172:30:5::215
+      startup-config: orhanergun_sr_config/xrv15.cfg
      
   links:
     - endpoints: ["xrv1:Gi0-0-0-0", "xrv8:Gi0-0-0-0"]
